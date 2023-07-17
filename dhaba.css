@@ -119,7 +119,7 @@ pre .food:hover{
 }
 
 
-/* responsive */
+/* responsive  */
 @media (max-width:600px) {
     #nav{
         flex-direction: column;

@@ -14,6 +14,8 @@ a{
     font-size: 65px;
     text-shadow: 5px 5px 40px rgb(0, 0, 0);
     transition: background-color 1s,color 1s;
+    /* position: sticky;
+    top: 0px; */
 }
 #name:hover{
     background-color: black;
@@ -85,8 +87,10 @@ a{
 }
 .img{
     /* border:var(--border); */
-    padding-top: 4px;
+    /* padding-top: 4px; */
     transition: all;
+    width: 225px;
+    height: 225px;
 }
 .img img{
     border-radius: 20px;
@@ -105,17 +109,13 @@ footer{
 
 .food{
     font-size: 25px;
-    /* padding: 5px; */
-    /* padding-bottom: 5px; */
     position: sticky;
-    /* z-index: -1; */
     background-color: wheat ;
     top: 0;
 }
 
 pre .food:hover{
     color: rgb(99, 104, 104);
-    /* position: sticky; */
 }
 
 
@@ -126,13 +126,22 @@ pre .food:hover{
         height: 140px;
     }
     .box{
-        flex-direction: column;
+        flex-direction: column-reverse;
+
     }
     #Veg{
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
-    
+    .img{
+        position: relative;
+        left:85px;
+        margin-top: 10px;
+    }
+    .overlay{
+        position: relative;
+        left:0px;
+    }
 }
 /* @media (min-width:599px){
     #nav{
@@ -140,3 +149,23 @@ pre .food:hover{
         height: 40px;
     }
 } */
+
+
+.overlay{
+    display: flex;
+    width: 225px;
+    height: 225px;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    position: relative;
+    bottom: 229px;
+    color: white;
+    background-color: rgba(39, 37, 37, 0.336);
+    opacity: 0;
+}
+.overlay:hover{
+    transform: scale(1.005);
+    opacity: 1;
+}
